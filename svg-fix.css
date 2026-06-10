@@ -1,0 +1,42 @@
+/* SVG board scale fix for the 0-100 game coordinate system. */
+.canvas .wire,
+.wire {
+  stroke-width: 1.8;
+}
+
+.inputLabel {
+  font-size: 5px;
+}
+
+.orbBase {
+  stroke-width: 0.9;
+}
+
+.orbText {
+  font-size: 9px;
+}
+
+.gateFill {
+  stroke-width: 0.9;
+}
+
+.gateText {
+  font-size: 5.6px;
+}
+
+.slotFill {
+  stroke-width: 0.9;
+  stroke-dasharray: 2 1.5;
+}
+
+.slotText {
+  font-size: 10px;
+}
+
+.goalText {
+  font-size: 5px;
+}
+
+.goalCrystal {
+  stroke-width: 0.7;
+}

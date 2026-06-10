@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "levels": [
+    {
+      "id": 1,
+      "title": "LEVEL 1",
+      "instruction": "MAKE GOAL ON",
+      "goal": 1,
+      "baseScore": 120,
+      "starTimeSeconds": 35,
+      "lesson": "AND",
+      "pieces": [
+        { "kind": "input", "value": 1 },
+        { "kind": "input", "value": 0 }
+      ],
+      "circuit": {
+        "inputs": { "A": 1, "B": null },
+        "nodes": [
+          { "id": "G1", "type": "AND", "inputs": ["A", "B"] }
+        ],
+        "output": "G1",
+        "layout": {
+          "inputs": { "A": { "x": 16, "y": 30 }, "B": { "x": 16, "y": 70 } },
+          "nodes": { "G1": { "x": 52, "y": 50 } },
+          "goal": { "x": 86, "y": 50 }
+        }
+      }
+    },
+    {
+      "id": 2,
+      "title": "LEVEL 2",
+      "instruction": "MAKE GOAL ON",
+      "goal": 1,
+      "baseScore": 120,
+      "starTimeSeconds": 35,
+      "lesson": "OR",
+      "pieces": [
+        { "kind": "input", "value": 1 },
+        { "kind": "input", "value": 0 }
+      ],
+      "circuit": {
+        "inputs": { "A": 0, "B": null },
+        "nodes": [
+          { "id": "G1", "type": "OR", "inputs": ["A", "B"] }
+        ],
+        "output": "G1",
+        "layout": {
+          "inputs": { "A": { "x": 16, "y": 30 }, "B": { "x": 16, "y": 70 } },
+          "nodes": { "G1": { "x": 52, "y": 50 } },
+          "goal": { "x": 86, "y": 50 }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "title": "LEVEL 3",
+      "instruction": "MAKE GOAL ON",
+      "goal": 1,
+      "baseScore": 120,
+      "starTimeSeconds": 35,
+      "lesson": "NOT",
+      "pieces": [
+        { "kind": "input", "value": 1 },
+        { "kind": "input", "value": 0 }
+      ],
+      "circuit": {
+        "inputs": { "A": null },
+        "nodes": [
+          { "id": "G1", "type": "NOT", "inputs": ["A"] }
+        ],
+        "output": "G1",
+        "layout": {
+          "inputs": { "A": { "x": 16, "y": 52 } },
+          "nodes": { "G1": { "x": 52, "y": 52 } },
+          "goal": { "x": 86, "y": 52 }
+        }
+      }
+    },
+    {
+      "id": 4,
+      "title": "LEVEL 4",
+      "instruction": "MAKE GOAL ON",
+      "goal": 1,
+      "baseScore": 130,
+      "starTimeSeconds": 40,
+      "lesson": "XOR",
+      "pieces": [
+        { "kind": "input", "value": 1 },
+        { "kind": "input", "value": 0 }
+      ],
+      "circuit": {
+        "inputs": { "A": 1, "B": null },
+        "nodes": [
+          { "id": "G1", "type": "XOR", "inputs": ["A", "B"] }
+        ],
+        "output": "G1",
+        "layout": {
+          "inputs": { "A": { "x": 16, "y": 30 }, "B": { "x": 16, "y": 70 } },
+          "nodes": { "G1": { "x": 52, "y": 50 } },
+          "goal": { "x": 86, "y": 50 }
+        }
+      }
+    },
+    {
+      "id": 5,
+      "title": "LEVEL 5",
+      "instruction": "MAKE GOAL ON",
+      "goal": 1,
+      "baseScore": 140,
+      "starTimeSeconds": 45,
+      "lesson": "NAND",
+      "pieces": [
+        { "kind": "input", "value": 1 },
+        { "kind": "input", "value": 0 }
+      ],
+      "circuit": {
+        "inputs": { "A": 1, "B": null },
+        "nodes": [
+          { "id": "G1", "type": "NAND", "inputs": ["A", "B"] }
+        ],
+        "output": "G1",
+        "layout": {
+          "inputs": { "A": { "x": 16, "y": 30 }, "B": { "x": 16, "y": 70 } },
+          "nodes": { "G1": { "x": 52, "y": 50 } },
+          "goal": { "x": 86, "y": 50 }
+        }
+      }
+    },
+    {
+      "id": 6,
+      "title": "LEVEL 6",
+      "instruction": "MAKE GOAL ON",
+      "goal": 1,
+      "baseScore": 140,
+      "starTimeSeconds": 45,
+      "lesson": "NOR",
+      "pieces": [
+        { "kind": "input", "value": 1 },
+        { "kind": "input", "value": 0 }
+      ],
+      "circuit": {
+        "inputs": { "A": 0, "B": null },
+        "nodes": [
+          { "id": "G1", "type": "NOR", "inputs": ["A", "B"] }
+        ],
+        "output": "G1",
+        "layout": {
+          "inputs": { "A": { "x": 16, "y": 30 }, "B": { "x": 16, "y": 70 } },
+          "nodes": { "G1": { "x": 52, "y": 50 } },
+          "goal": { "x": 86, "y": 50 }
+        }
+      }
+    },
+    {
+      "id": 7,
+      "title": "LEVEL 7",
+      "instruction": "MAKE GOAL ON",
+      "goal": 1,
+      "baseScore": 180,
+      "starTimeSeconds": 55,
+      "lesson": "2 LAYERS",
+      "pieces": [
+        { "kind": "input", "value": 1 },
+        { "kind": "input", "value": 0 }
+      ],
+      "circuit": {
+        "inputs": { "A": 1, "B": 1, "C": null },
+        "nodes": [
+          { "id": "G1", "type": "AND", "inputs": ["A", "B"] },
+          { "id": "G2", "type": "AND", "inputs": ["G1", "C"] }
+        ],
+        "output": "G2",
+        "layout": {
+          "inputs": { "A": { "x": 14, "y": 22 }, "B": { "x": 14, "y": 48 }, "C": { "x": 14, "y": 76 } },
+          "nodes": { "G1": { "x": 40, "y": 35 }, "G2": { "x": 65, "y": 52 } },
+          "goal": { "x": 86, "y": 52 }
+        }
+      }
+    },
+    {
+      "id": 8,
+      "title": "LEVEL 8",
+      "instruction": "MAKE GOAL ON",
+      "goal": 1,
+      "baseScore": 190,
+      "starTimeSeconds": 60,
+      "lesson": "2 LAYERS",
+      "pieces": [
+        { "kind": "input", "value": 1 },
+        { "kind": "input", "value": 0 }
+      ],
+      "circuit": {
+        "inputs": { "A": 1, "B": 0, "C": null },
+        "nodes": [
+          { "id": "G1", "type": "OR", "inputs": ["A", "B"] },
+          { "id": "G2", "type": "XOR", "inputs": ["G1", "C"] }
+        ],
+        "output": "G2",
+        "layout": {
+          "inputs": { "A": { "x": 14, "y": 22 }, "B": { "x": 14, "y": 48 }, "C": { "x": 14, "y": 76 } },
+          "nodes": { "G1": { "x": 40, "y": 35 }, "G2": { "x": 65, "y": 52 } },
+          "goal": { "x": 86, "y": 52 }
+        }
+      }
+    },
+    {
+      "id": 9,
+      "title": "LEVEL 9",
+      "instruction": "MAKE GOAL ON",
+      "goal": 1,
+      "baseScore": 220,
+      "starTimeSeconds": 70,
+      "lesson": "PICK GATE",
+      "pieces": [
+        { "kind": "gate", "value": "AND" },
+        { "kind": "gate", "value": "OR" }
+      ],
+      "circuit": {
+        "inputs": { "A": 1, "B": 0, "C": 1 },
+        "nodes": [
+          { "id": "G1", "type": "NOT", "inputs": ["A"] },
+          { "id": "G2", "type": "OR", "inputs": ["B", "C"] },
+          { "id": "G3", "type": null, "inputs": ["G1", "G2"] }
+        ],
+        "output": "G3",
+        "layout": {
+          "inputs": { "A": { "x": 14, "y": 22 }, "B": { "x": 14, "y": 55 }, "C": { "x": 14, "y": 82 } },
+          "nodes": { "G1": { "x": 39, "y": 24 }, "G2": { "x": 40, "y": 68 }, "G3": { "x": 64, "y": 50 } },
+          "goal": { "x": 86, "y": 50 }
+        }
+      }
+    },
+    {
+      "id": 10,
+      "title": "LEVEL 10",
+      "instruction": "MAKE GOAL ON",
+      "goal": 1,
+      "baseScore": 240,
+      "starTimeSeconds": 75,
+      "lesson": "PICK GATE",
+      "pieces": [
+        { "kind": "gate", "value": "AND" },
+        { "kind": "gate", "value": "OR" },
+        { "kind": "gate", "value": "XOR" }
+      ],
+      "circuit": {
+        "inputs": { "A": 1, "B": 0, "C": 1 },
+        "nodes": [
+          { "id": "G1", "type": "AND", "inputs": ["A", "C"] },
+          { "id": "G2", "type": "OR", "inputs": ["B", "C"] },
+          { "id": "G3", "type": null, "inputs": ["G1", "G2"] }
+        ],
+        "output": "G3",
+        "layout": {
+          "inputs": { "A": { "x": 14, "y": 22 }, "B": { "x": 14, "y": 55 }, "C": { "x": 14, "y": 82 } },
+          "nodes": { "G1": { "x": 39, "y": 24 }, "G2": { "x": 40, "y": 68 }, "G3": { "x": 64, "y": 50 } },
+          "goal": { "x": 86, "y": 50 }
+        }
+      }
+    }
+  ]
+}

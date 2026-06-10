@@ -1,0 +1,177 @@
+/* Mobile viewport and horizontal overflow fix. */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  position: fixed;
+  inset: 0;
+}
+
+.app {
+  width: 100%;
+  max-width: 560px;
+  min-width: 0;
+  overflow: hidden;
+  padding-left: max(6px, env(safe-area-inset-left));
+  padding-right: max(6px, env(safe-area-inset-right));
+}
+
+.top,
+.coach,
+.board,
+.tray,
+.hint {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.top > *,
+.hud,
+.coach > *,
+.instruction,
+.board,
+.tray {
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* Use proportional HUD widths so the row cannot force page zoom/overflow. */
+.top {
+  width: 100%;
+  grid-template-columns: 0.58fr 0.95fr 1.42fr 0.82fr 0.58fr;
+  gap: 6px;
+}
+
+.hud {
+  width: 100%;
+}
+
+.instruction {
+  white-space: nowrap;
+  text-overflow: clip;
+}
+
+/* Keep the puzzle drawing away from the very edge on narrow phones. */
+.canvas {
+  overflow: visible;
+}
+
+@media (max-width: 430px) {
+  .app {
+    grid-template-rows: 60px 94px minmax(0, 1fr) 108px 31px;
+    gap: 7px;
+    padding-top: 7px;
+    padding-bottom: 8px;
+  }
+
+  .top {
+    grid-template-columns: 48px 84px minmax(104px, 1fr) 70px 48px;
+    gap: 5px;
+  }
+
+  .hud {
+    height: 60px;
+    border-radius: 14px;
+  }
+
+  .iconBtn {
+    font-size: 30px;
+  }
+
+  .timer {
+    font-size: 18px;
+    grid-template-columns: 19px 1fr;
+    padding: 0 5px;
+  }
+
+  .timerIcon {
+    font-size: 18px;
+  }
+
+  .levelTitle {
+    font-size: 17px;
+    line-height: 21px;
+  }
+
+  .stars {
+    font-size: 18px;
+    gap: 0;
+  }
+
+  .scoreBox {
+    font-size: 10px;
+  }
+
+  .scoreBox b {
+    font-size: 20px;
+  }
+
+  .reset {
+    font-size: 22px;
+  }
+
+  .reset span {
+    display: none;
+  }
+
+  .coach {
+    grid-template-columns: 108px minmax(0, 1fr);
+  }
+
+  .robot {
+    transform: scale(0.82);
+    transform-origin: left bottom;
+  }
+
+  .instruction {
+    font-size: clamp(24px, 6.7vw, 32px);
+    letter-spacing: 0;
+  }
+
+  .board,
+  .coach,
+  .tray {
+    border-radius: 18px;
+  }
+
+  .piece {
+    min-width: 86px;
+  }
+
+  .circle {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+@media (max-width: 380px) {
+  .top {
+    grid-template-columns: 44px 76px minmax(94px, 1fr) 62px 44px;
+    gap: 4px;
+  }
+
+  .timer {
+    font-size: 16px;
+  }
+
+  .levelTitle {
+    font-size: 15px;
+  }
+
+  .stars {
+    font-size: 16px;
+  }
+
+  .scoreBox b {
+    font-size: 18px;
+  }
+
+  .instruction {
+    font-size: clamp(22px, 6.3vw, 28px);
+  }
+}
